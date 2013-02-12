@@ -6,6 +6,12 @@ This is a plugin for [Wechat web version](https://web.wechatapp.com/), which cou
 
 That means, when you got new message, you will get a notification, and will not likely miss it!
 
+**How to use it**
+
+* Download the `wechat-chrome-plugin.crx` file
+* Drag&Drop it into Chrome
+* No more Steps
+
 This plugin could:
 
 * Popup a desktop notification when you got new messages
