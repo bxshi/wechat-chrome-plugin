@@ -3,6 +3,7 @@
 var notificationCache = {};
 
 var checkInterval = 1000;
+var reShowInterval = 5000;
 
 /**
  * Delete cache, so all notification will be sent
@@ -32,8 +33,8 @@ var bindTab2Notification = function(tab, notification){
  * @param notification  --  Desktop notification object
  */
 var showNotification = function(tab, nickname, notification){
-    if (!notificationCache[nickname]){
-        notificationCache[nickname] = true;
+    if (!notificationCache[nickname] || (new Date() - notificationCache[nickname])>reShowInterval){
+        notificationCache[nickname] = new Date();
         bindTab2Notification(tab, notification);
         notification.show();
 
